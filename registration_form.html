@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký Người Dùng</title>
+</head>
+<body>
+
+    <!-- Form đăng ký gửi dữ liệu lên server CodeGym qua phương thức POST -->
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+        <fieldset>
+            <legend><h2>Đăng Ký Người Dùng</h2></legend>
+
+            <table border="0" cellpadding="8" cellspacing="0">
+                <!-- Trường Họ và tên -->
+                <tr>
+                    <td><label for="name"><b>Họ và tên:</b></label></td>
+                    <td>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ và tên" size="30" required>
+                    </td>
+                </tr>
+
+                <!-- Trường Email -->
+                <tr>
+                    <td><label for="email"><b>Email:</b></label></td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" size="30" required>
+                    </td>
+                </tr>
+
+                <!-- Trường Số điện thoại -->
+                <tr>
+                    <td><label for="phone"><b>Số điện thoại:</b></label></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="0901234567" size="30" required>
+                    </td>
+                </tr>
+
+                <!-- Trường Giới tính -->
+                <tr>
+                    <td><b>Giới tính:</b></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Nam</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Nữ</label>
+                    </td>
+                </tr>
+
+                <!-- Nút Submit đăng ký -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đăng ký">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Nhập lại">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
