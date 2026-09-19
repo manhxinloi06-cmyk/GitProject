@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Tạo Form Đơn Giản</title>
+</head>
+<body>
+
+    <!-- ================= PHẦN 1: FORM SỞ THÍCH ================= -->
+    <form action="#" method="POST">
+        <fieldset>
+            <legend><h2>Phần 1: Form Thông Tin Cá Nhân & Sở Thích</h2></legend>
+            
+            <table border="0" cellpadding="8" cellspacing="0">
+                <tr>
+                    <td><label for="yourname"><b>Họ và tên:</b></label></td>
+                    <td><input type="text" id="yourname" name="yourname" placeholder="Nhập họ và tên" size="30" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email"><b>Email:</b></label></td>
+                    <td><input type="email" id="email" name="email" placeholder="example@gmail.com" size="30" required></td>
+                </tr>
+                <tr>
+                    <td valign="top"><b>Sở thích:</b></td>
+                    <td>
+                        <input type="checkbox" id="read" name="hobby" value="reading">
+                        <label for="read">Đọc sách</label>
+                        &nbsp;&nbsp;
+                        <input type="checkbox" id="music" name="hobby" value="music">
+                        <label for="music">Nghe nhạc</label>
+                        &nbsp;&nbsp;
+                        <input type="checkbox" id="sports" name="hobby" value="sports">
+                        <label for="sports">Thể thao</label>
+                        <br><br>
+                        <input type="checkbox" id="code" name="hobby" value="coding">
+                        <label for="code">Lập trình</label>
+                        &nbsp;&nbsp;
+                        <input type="checkbox" id="travel" name="hobby" value="travel">
+                        <label for="travel">Du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gửi thông tin">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Nhập lại">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+    <br><hr><br>
+
+    <!-- ================= PHẦN 2: FORM ĐĂNG KÝ HỌC VIÊN ================= -->
+    <form action="#" method="POST">
+        <fieldset>
+            <legend><h2>Phần 2: Form Đăng Ký Học Viên</h2></legend>
+            
+            <table border="0" cellpadding="8" cellspacing="0">
+                <tr>
+                    <td><label for="fullname"><b>Họ và tên (Full Name):</b></label></td>
+                    <td><input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" size="35" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob"><b>Ngày sinh (Date of Birth):</b></label></td>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td><b>Giới tính (Gender):</b></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Nam</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="student_email"><b>Email liên hệ:</b></label></td>
+                    <td><input type="email" id="student_email" name="student_email" placeholder="hocvien@gmail.com" size="35" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone"><b>Số điện thoại (Phone):</b></label></td>
+                    <td><input type="tel" id="phone" name="phone" placeholder="0901234567" size="35" required></td>
+                </tr>
+                <tr>
+                    <td><label for="course"><b>Khóa học (Course):</b></label></td>
+                    <td>
+                        <select id="course" name="course">
+                            <option value="html_css">Lập trình Web Frontend (HTML/CSS)</option>
+                            <option value="javascript">JavaScript Nâng Cao</option>
+                            <option value="react">ReactJS Professional</option>
+                            <option value="python">Python Căn Bản</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><label for="address"><b>Địa chỉ (Address):</b></label></td>
+                    <td><textarea id="address" name="address" rows="4" cols="33" placeholder="Nhập địa chỉ của bạn..."></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đăng ký học">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Xóa làm lại">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
