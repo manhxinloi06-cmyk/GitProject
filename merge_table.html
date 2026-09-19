@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Gộp ô trong bảng</title>
+</head>
+<body>
+
+    <h2>Thời khóa biểu</h2>
+
+    <!-- Bảng thời khóa biểu có sử dụng rowspan và colspan -->
+    <table border="1">
+        <tr>
+            <th>Thứ</th>
+            <th>Môn học</th>
+            <th>Giáo viên</th>
+        </tr>
+        <tr>
+            <!-- Gộp 2 hàng theo chiều dọc cho cột Thứ -->
+            <td rowspan="2">Thứ Hai</td>
+            <td>Toán</td>
+            <td>Thầy Nam</td>
+        </tr>
+        <tr>
+            <!-- Do Thứ Hai đã gộp 2 hàng nên hàng này chỉ cần 2 ô -->
+            <td>Văn</td>
+            <td>Cô Hạnh</td>
+        </tr>
+        <tr>
+            <td>Thứ Ba</td>
+            <!-- Gộp 2 cột theo chiều ngang cho cột Môn học & Giáo viên -->
+            <td colspan="2">Nghỉ học</td>
+        </tr>
+    </table>
+
+</body>
+</html>
