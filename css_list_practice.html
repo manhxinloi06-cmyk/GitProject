@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Danh sách trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        /* 1. Thay đổi biểu tượng ký hiệu danh sách (list-style-type) */
+        ul.circle-list {
+            list-style-type: circle;
+        }
+
+        ul.square-list {
+            list-style-type: square;
+        }
+
+        ol.upper-roman {
+            list-style-type: upper-roman; /* I, II, III, IV... */
+        }
+
+        ol.lower-alpha {
+            list-style-type: lower-alpha; /* a, b, c, d... */
+        }
+
+        /* 2. Dùng hình ảnh làm ký hiệu đánh dấu (list-style-image) */
+        ul.custom-icon-list {
+            list-style-image: url('https://via.placeholder.com/12/3498db/ffffff?text=>');
+        }
+
+        /* 3. Vị trí của ký hiệu đánh dấu (list-style-position) */
+        ul.inside-list {
+            list-style-position: inside; /* Dấu chấm nằm bên trong khối văn bản */
+            background-color: #e8f8f5;
+            padding: 10px;
+        }
+
+        ul.outside-list {
+            list-style-position: outside; /* Dấu chấm nằm ngoài khối văn bản (mặc định) */
+            background-color: #fef9e7;
+            padding: 10px 10px 10px 30px;
+        }
+
+        /* 4. Thuộc tính rút gọn list-style (Shorthand) */
+        ul.shorthand-list {
+            /* Order: list-style-type | list-style-position | list-style-image */
+            list-style: square inside url('https://via.placeholder.com/12/e74c3c/ffffff?text=*');
+        }
+
+        /* 5. Định kiểu danh sách với màu sắc */
+        ol.colored-list {
+            background-color: #3498db; /* Màu nền cho cả danh sách <ol> */
+            color: white; /* Màu chữ số thứ tự */
+            padding: 20px 20px 20px 40px;
+            border-radius: 8px;
+        }
+
+        ol.colored-list li {
+            background-color: #ffffff; /* Màu nền riêng cho từng thẻ <li> */
+            color: #333333; /* Màu chữ của phần tử */
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Đánh dấu mục danh sách khác nhau (list-style-type)</h2>
+    <h3>Danh sách không thứ tự (ul):</h3>
+    <ul class="circle-list">
+        <li>Hình tròn rỗng (Circle)</li>
+        <li>Thực phẩm hữu cơ</li>
+    </ul>
+    <ul class="square-list">
+        <li>Hình vuông (Square)</li>
+        <li>Đồ uống giải khát</li>
+    </ul>
+
+    <h3>Danh sách có thứ tự (ol):</h3>
+    <ol class="upper-roman">
+        <li>Số La Mã in hoa (Upper-Roman I, II, III)</li>
+        <li>Thiết kế Giao diện UI/UX</li>
+    </ol>
+    <ol class="lower-alpha">
+        <li>Chữ cái thường (Lower-Alpha a, b, c)</li>
+        <li>Lập trình Frontend</li>
+    </ol>
+
+    <h2>2. Đánh dấu bằng hình ảnh (list-style-image)</h2>
+    <ul class="custom-icon-list">
+        <li>Thẻ <li> nhận hình ảnh tùy chỉnh làm bullet</li>
+        <li>Kiểm tra hiển thị icon custom</li>
+    </ul>
+
+    <h2>3. Vị trí đánh dấu (list-style-position)</h2>
+    <p><b>Inside:</b> Dấu đầu dòng nằm bên trong lề nội dung.</p>
+    <ul class="inside-list">
+        <li>Mục 1 với vị trí inside</li>
+        <li>Mục 2 với vị trí inside</li>
+    </ul>
+
+    <p><b>Outside:</b> Dấu đầu dòng nhô ra bên ngoài lề (Mặc định).</p>
+    <ul class="outside-list">
+        <li>Mục 1 với vị trí outside</li>
+        <li>Mục 2 với vị trí outside</li>
+    </ul>
+
+    <h2>4. Thuộc tính rút gọn (list-style)</h2>
+    <ul class="shorthand-list">
+        <li>Áp dụng cú pháp rút gọn 1 dòng</li>
+        <li>Có fallback type nếu hình ảnh không tải được</li>
+    </ul>
+
+    <h2>5. Danh sách kết hợp màu sắc đẹp mắt</h2>
+    <ol class="colored-list">
+        <li>Học HTML căn bản và nâng cao</li>
+        <li>Thực hành làm chủ CSS Selectors và Styles</li>
+        <li>Xây dựng giao diện Web chuẩn Responsive</li>
+    </ol>
+
+</body>
+</html>
