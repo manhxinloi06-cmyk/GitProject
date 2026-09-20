@@ -1,0 +1,64 @@
+/* 1. Thiết lập màu nền (background-color) cho toàn bộ trang web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5; /* Màu nền xám xanh dịu mắt */
+    color: #333333;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Định dạng tiêu đề và đoạn văn mô tả */
+h1 {
+    color: #1e3a8a;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+/* 2. Cấu hình khối div chứa nội dung quan trọng với ảnh nền (background-image) */
+.important-box {
+    /* Đặt ảnh nền (sử dụng ảnh mẫu chất lượng cao) */
+    background-image: url("https://picsum.photos/id/1015/800/400");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Căn giữa nội dung bên trong khối div */
+    text-align: center;
+    color: #ffffff; /* Màu chữ trắng để nổi bật trên ảnh nền */
+    
+    /* Khoảng đệm và viền khối */
+    padding: 50px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    /* Thêm lớp phủ mờ tối giúp chữ dễ đọc hơn */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tạo lớp phủ màu nền trong suốt đè lên ảnh nền để chữ hiển thị rõ nét hơn */
+.important-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen trong suốt 50% */
+    z-index: 1;
+}
+
+/* Đưa nội dung chữ lên trên lớp phủ overlay */
+.important-box h2,
+.important-box p {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+}
