@@ -1,0 +1,84 @@
+/* 1. Element Selector: Đổi màu nền toàn bộ trang web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Màu nền xám xanh nhẹ */
+    color: #333333;
+    margin: 40px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* 2. ID Selector: Căn giữa tiêu đề chính h1 */
+#main-title {
+    text-align: center;
+    color: #1e3a8a; /* Màu xanh đậm */
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 10px;
+}
+
+/* 3. Class Selector: Định dạng đoạn văn mô tả */
+.bio-text {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #4b5563;
+}
+
+/* 4. Grouping Selector: Gộp định dạng tiêu đề h2 và danh sách */
+h2, .hobby-list {
+    margin-top: 25px;
+}
+
+/* 5. Định dạng màu sắc khác nhau cho từng mục trong danh sách */
+.hobby-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.hobby-item {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.item-1 {
+    color: #dc2626; /* Màu đỏ */
+    background-color: #fee2e2;
+}
+
+.item-2 {
+    color: #2563eb; /* Màu xanh dương */
+    background-color: #dbeafe;
+}
+
+.item-3 {
+    color: #16a34a; /* Màu xanh lá */
+    background-color: #dcfce7;
+}
+
+/* 6. Button & Pseudo-class :hover effect */
+.action-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#btn-action {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng rê chuột (Hover effect) cho nút bấm */
+#btn-action:hover {
+    background-color: #1d4ed8; /* Đổi màu nền tối hơn khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi nhẹ nút */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
