@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Nhúng CSS vào trang HTML</title>
+
+    <!-- PHẦN 3: EXTERNAL STYLE (Liên kết file CSS bên ngoài) -->
+    <link rel="stylesheet" href="css/style2.css">
+
+    <!-- PHẦN 2: INTERNAL STYLE (Viết CSS trong thẻ <style> ở phần <head>) -->
+    <style>
+        .internal-heading {
+            color: #0d6efd; /* Màu xanh dương */
+            font-size: 24px;
+        }
+
+        .internal-paragraph {
+            color: #198754; /* Màu xanh lá */
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= PHẦN 1: INLINE STYLE ================= -->
+    <section>
+        <h1 style="color: #dc3545; font-size: 28px;">Phần 1: Inline Style - Tiêu đề màu đỏ</h1>
+        <p style="color: #fd7e14; font-size: 18px;">Đoạn văn này được định dạng màu cam bằng thuộc tính inline style trực tiếp trên thẻ HTML.</p>
+    </section>
+
+    <hr>
+
+    <!-- ================= PHẦN 2: INTERNAL STYLE ================= -->
+    <section>
+        <h1 class="internal-heading">Phần 2: Internal Style - Tiêu đề màu xanh dương</h1>
+        <p class="internal-paragraph">Đoạn văn này được định dạng màu xanh lá bằng Internal CSS nằm trong thẻ &lt;style&gt; ở phần &lt;head&gt;.</p>
+    </section>
+
+    <hr>
+
+    <!-- ================= PHẦN 3: EXTERNAL STYLE ================= -->
+    <section>
+        <h1 class="external-heading">Phần 3: External Style - Tiêu đề màu tím</h1>
+        <p class="external-paragraph">Đoạn văn này được định dạng màu nâu bằng External CSS nằm trong file css/style.css riêng biệt.</p>
+    </section>
+
+</body>
+</html>

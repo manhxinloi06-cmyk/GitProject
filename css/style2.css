@@ -1,0 +1,10 @@
+/* PHẦN 3: EXTERNAL STYLE */
+.external-heading {
+    color: #6f42c1; /* Màu tím */
+    font-size: 24px;
+}
+
+.external-paragraph {
+    color: #795548; /* Màu nâu */
+    font-size: 16px;
+}
