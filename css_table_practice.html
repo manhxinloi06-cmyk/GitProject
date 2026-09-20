@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Định dạng Bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 5px;
+        }
+
+        /* 1. Bảng mặc định có viền đôi (Double border) */
+        table.default-table, table.default-table th, table.default-table td {
+            border: 1px solid black;
+        }
+
+        /* 2. Bảng được tối ưu bằng CSS */
+        table.styled-table {
+            /* Tối ưu viền đôi thành viền đơn sắc nét */
+            border-collapse: collapse;
+            /* Thiết lập chiều rộng 100% màn hình */
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        /* Thiết lập Padding và Viền dưới cho các ô dữ liệu/tiêu đề */
+        table.styled-table th, table.styled-table td {
+            border: 1px solid #ddd;
+            /* Tạo khoảng cách giữa đường viền và nội dung bên trong */
+            padding: 12px 15px;
+        }
+
+        /* Định dạng riêng cho Tiêu đề Bảng <th> */
+        table.styled-table th {
+            /* Chiều cao tiêu đề 50px */
+            height: 50px;
+            /* Căn lề trái theo chiều ngang */
+            text-align: left;
+            /* Màu nền và màu chữ tiêu đề */
+            background-color: #0d6efd;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Định dạng Căn chỉnh chiều dọc và hiệu ứng Zebra cho <td> */
+        table.styled-table td {
+            /* Căn chỉnh theo chiều dọc: ở giữa (middle) hoặc xuống dưới (bottom) */
+            vertical-align: middle;
+        }
+
+        /* Tạo hàng xen kẽ màu (Zebra Striping) giúp dễ đọc */
+        table.styled-table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Hiệu ứng Đổi màu nền khi rê chuột qua hàng */
+        table.styled-table tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Bảng HTML chưa gộp viền (Mặc định bị viền đôi)</h2>
+    <table class="default-table">
+        <tr>
+            <th>Họ và Tên</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>anguyen@gmail.com</td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <h2>2. Bảng HTML đã được định dạng CSS hoàn chỉnh</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá bán</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Laptop Dell XPS 13</td>
+                <td>32,500,000 VND</td>
+                <td>Còn hàng</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Màn hình LG UltraGear 27 inch</td>
+                <td>8,900,000 VND</td>
+                <td>Còn hàng</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bàn phím cơ Keychron K2</td>
+                <td>1,950,000 VND</td>
+                <td>Hết hàng</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Chuột không dây Logitech MX Master 3S</td>
+                <td>2,450,000 VND</td>
+                <td>Còn hàng</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
